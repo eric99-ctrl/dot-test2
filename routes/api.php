@@ -17,12 +17,9 @@ use App\Http\Controllers\AuthController;
 */
 
 
-Route::post('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::get('/profile', function(Request $request) {
-        return auth()->user();
-    });
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/search/provinces', [APIController::class, 'searchProvince'])->name('province.search');
     Route::get('/search/cities', [APIController::class, 'searchCity'])->name('city.search');

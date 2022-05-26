@@ -16,3 +16,4 @@
 - api Login -> POST /api/login -> email = 'admin@google.com',  password ='secret' -> menghasilkan acces_token type bearer token
 - pencarian yang perlu autentikasi token -> GET /api/search/provinces?id={province_id},
                                             GET /api/search/cities?id={city_id}
+- unit test -> RouteTest
